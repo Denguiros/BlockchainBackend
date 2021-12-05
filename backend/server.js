@@ -14,7 +14,7 @@ router.get("/api/getPaymentId/:paymentId", async (ctx, next) => {
   var paymentId = ctx.params.paymentId;
   var idsAsString = "";
   for (var i in ids) {
-    idsAsString += i + " ";
+    idsAsString += ids[i] + " ";
   }
   console.log(idsAsString);
   //2. save paymentId + itemIds in mongo
